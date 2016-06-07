@@ -1,11 +1,12 @@
 ---
 applications:
 - services:
-  - catalogAPI
-  - ordersAPI
+  - myServiceDiscovery 
 name: MicroservicesUI
 memory: 256M
 instances: 1
 host: ms-UI-${random-word}
-domain: mybluemix.net
+domain: servicemanagement.mybluemix.net
 path: .
+env:
+ BP_DEBUG: true
